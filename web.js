@@ -1,8 +1,8 @@
 var express = require("express");
-var accountSid = proccess.env.twilSID
+var accountSid = process.env.twilSID;
 		
 
-var authToken = process.env.twilToken
+var authToken = process.env.twilToken;
 var twilio = require('twilio')
 var client = new twilio.RestClient(accountSid, authToken)
 
