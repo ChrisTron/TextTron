@@ -1,0 +1,26 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+	message:  
+	<input id="message" type="text">
+	phonenumber:
+	<input id="phoneNumber" type="text">
+	<input id="sendtextbutton" type="button" value="send text">
+	<script type="text/javascript">
+		$("#sendtextbutton").on("click", function(){
+			data={};
+			data.message=$("#message").val();
+			data.phone=$("#phoneNumber").val();
+			$.ajax({
+				type: "POST",
+				url: "/sendtext",
+				data: data
+			})
+		});
+
+	</script>
+</body>
+</html>
+
